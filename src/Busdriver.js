@@ -11,8 +11,7 @@ class Busdriver {
     return this.gossipArray;
   }
 
-
-  getCurrentStation(){
+  getCurrentStation() {
     return this.route[this.currentRouteIndex];
   }
 
@@ -24,7 +23,7 @@ class Busdriver {
 
   driveToNextStation() {
     const isLastStop = () => {
-      return this.currentRouteIndex === this.route.length-1;
+      return this.currentRouteIndex === this.route.length - 1;
     };
 
     if (isLastStop()) {
@@ -35,7 +34,8 @@ class Busdriver {
   }
 }
 
-module.exports = Busdriver;
+export default Busdriver;
+
 /*
 driverProperties = 
 {

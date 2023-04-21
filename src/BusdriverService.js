@@ -1,28 +1,26 @@
-const Busdriver = require("../src/Busdriver.js");
+import Busdriver from '../src/Busdriver.js';
 
-class BusdriverService{
-    constructor(properties){
-        this.allRoutes = properties.allRoutes;
-        this.allDrivers = [];
-    }
+class BusdriverService {
+  constructor(properties) {
+    this.allRoutes = properties.allRoutes;
+    this.allDrivers = [];
+  }
 
-    busdriverFactory(){
-        const createBusdriver = (route, index, numberOfGossips) => {
-            let busdriverProperties = {};
-            busdriverProperties.route = route;
-            busdriverProperties.id = index;
-            busdriverProperties.numberOfGossips = numberOfGossips;
-            let busdriver = new Busdriver(busdriverProperties);
-            busdriver.initialize();
-            return busdriver;
-        };
-        
-        this.allDrivers = this.allRoutes.map(route => {
-            
-        });
+  busdriverFactory() {
+    const createBusdriver = (route, index, numberOfGossips) => {
+      let busdriverProperties = {};
+      busdriverProperties.route = route;
+      busdriverProperties.id = index;
+      busdriverProperties.numberOfGossips = numberOfGossips;
+      let busdriver = new Busdriver(busdriverProperties);
+      busdriver.initialize();
+      return busdriver;
+    };
 
-
-    }
+    this.allDrivers = this.allRoutes.map(route => {});
+  }
 }
 
-module.exports = BusdriverService;
+// module.exports = BusdriverService;
+
+export default BusdriverService;
