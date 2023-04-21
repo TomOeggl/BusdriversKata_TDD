@@ -1,38 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1682080895308" clover="3.2.0">
-  <project timestamp="1682080895308" name="All files">
-    <metrics statements="26" coveredstatements="18" conditionals="2" coveredconditionals="2" methods="10" coveredmethods="8" elements="38" coveredelements="28" complexity="0" loc="26" ncloc="26" packages="1" files="2" classes="2"/>
-    <file name="Busdriver.js" path="C:\LocalDrive\BusdriversKata_TDD\src\Busdriver.js">
-      <metrics statements="15" coveredstatements="14" conditionals="2" coveredconditionals="2" methods="6" coveredmethods="5"/>
-      <line num="3" count="4" type="stmt"/>
-      <line num="4" count="4" type="stmt"/>
+<coverage generated="1682087813846" clover="3.2.0">
+  <project timestamp="1682087813846" name="All files">
+    <metrics statements="36" coveredstatements="36" conditionals="2" coveredconditionals="2" methods="16" coveredmethods="16" elements="54" coveredelements="54" complexity="0" loc="36" ncloc="36" packages="1" files="2" classes="2"/>
+    <file name="Busdriver.js" path="/home/thomas/projects/codeacademy-docker-master/workspace/BusdriversKata_TDD/src/Busdriver.js">
+      <metrics statements="15" coveredstatements="15" conditionals="2" coveredconditionals="2" methods="6" coveredmethods="6"/>
+      <line num="3" count="17" type="stmt"/>
+      <line num="4" count="17" type="stmt"/>
+      <line num="5" count="17" type="stmt"/>
+      <line num="6" count="17" type="stmt"/>
+      <line num="7" count="17" type="stmt"/>
+      <line num="11" count="1" type="stmt"/>
+      <line num="15" count="8" type="stmt"/>
+      <line num="19" count="13" type="stmt"/>
+      <line num="20" count="13" type="stmt"/>
+      <line num="21" count="13" type="stmt"/>
+      <line num="25" count="11" type="stmt"/>
+      <line num="26" count="11" type="stmt"/>
+      <line num="29" count="11" type="cond" truecount="2" falsecount="0"/>
+      <line num="30" count="1" type="stmt"/>
+      <line num="32" count="10" type="stmt"/>
+    </file>
+    <file name="BusdriverService.js" path="/home/thomas/projects/codeacademy-docker-master/workspace/BusdriversKata_TDD/src/BusdriverService.js">
+      <metrics statements="21" coveredstatements="21" conditionals="0" coveredconditionals="0" methods="10" coveredmethods="10"/>
       <line num="5" count="4" type="stmt"/>
       <line num="6" count="4" type="stmt"/>
-      <line num="7" count="4" type="stmt"/>
-      <line num="11" count="1" type="stmt"/>
-      <line num="15" count="0" type="stmt"/>
-      <line num="19" count="1" type="stmt"/>
-      <line num="20" count="1" type="stmt"/>
-      <line num="21" count="1" type="stmt"/>
-      <line num="25" count="2" type="stmt"/>
-      <line num="26" count="2" type="stmt"/>
-      <line num="29" count="2" type="cond" truecount="2" falsecount="0"/>
-      <line num="30" count="1" type="stmt"/>
-      <line num="32" count="1" type="stmt"/>
-    </file>
-    <file name="BusdriverService.js" path="C:\LocalDrive\BusdriversKata_TDD\src\BusdriverService.js">
-      <metrics statements="11" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="3"/>
-      <line num="5" count="1" type="stmt"/>
-      <line num="6" count="1" type="stmt"/>
-      <line num="10" count="1" type="stmt"/>
-      <line num="11" count="0" type="stmt"/>
-      <line num="12" count="0" type="stmt"/>
-      <line num="13" count="0" type="stmt"/>
-      <line num="14" count="0" type="stmt"/>
-      <line num="15" count="0" type="stmt"/>
-      <line num="16" count="0" type="stmt"/>
-      <line num="17" count="0" type="stmt"/>
-      <line num="20" count="1" type="stmt"/>
+      <line num="10" count="4" type="stmt"/>
+      <line num="11" count="12" type="stmt"/>
+      <line num="12" count="12" type="stmt"/>
+      <line num="13" count="12" type="stmt"/>
+      <line num="16" count="4" type="stmt"/>
+      <line num="17" count="12" type="stmt"/>
+      <line num="22" count="12" type="stmt"/>
+      <line num="27" count="3" type="stmt"/>
+      <line num="28" count="9" type="stmt"/>
+      <line num="33" count="2" type="stmt"/>
+      <line num="34" count="2" type="stmt"/>
+      <line num="36" count="2" type="stmt"/>
+      <line num="37" count="6" type="stmt"/>
+      <line num="38" count="6" type="stmt"/>
+      <line num="41" count="2" type="stmt"/>
+      <line num="45" count="1" type="stmt"/>
+      <line num="46" count="1" type="stmt"/>
+      <line num="47" count="4" type="stmt"/>
+      <line num="49" count="1" type="stmt"/>
     </file>
   </project>
 </coverage>
