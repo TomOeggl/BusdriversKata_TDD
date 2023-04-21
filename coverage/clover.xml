@@ -1,17 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1682068136538" clover="3.2.0">
-  <project timestamp="1682068136538" name="All files">
-    <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3" elements="11" coveredelements="11" complexity="0" loc="8" ncloc="8" packages="1" files="1" classes="1"/>
+<coverage generated="1682073780256" clover="3.2.0">
+  <project timestamp="1682073780256" name="All files">
+    <metrics statements="16" coveredstatements="15" conditionals="2" coveredconditionals="2" methods="6" coveredmethods="5" elements="24" coveredelements="22" complexity="0" loc="16" ncloc="16" packages="1" files="1" classes="1"/>
     <file name="Busdriver.js" path="/home/thomas/projects/codeacademy-docker-master/workspace/BusdriversKata_TDD/src/Busdriver.js">
-      <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
-      <line num="3" count="2" type="stmt"/>
-      <line num="4" count="2" type="stmt"/>
-      <line num="5" count="2" type="stmt"/>
-      <line num="9" count="2" type="stmt"/>
-      <line num="13" count="1" type="stmt"/>
-      <line num="14" count="1" type="stmt"/>
-      <line num="15" count="1" type="stmt"/>
-      <line num="19" count="1" type="stmt"/>
+      <metrics statements="16" coveredstatements="15" conditionals="2" coveredconditionals="2" methods="6" coveredmethods="5"/>
+      <line num="3" count="4" type="stmt"/>
+      <line num="4" count="4" type="stmt"/>
+      <line num="5" count="4" type="stmt"/>
+      <line num="6" count="4" type="stmt"/>
+      <line num="7" count="4" type="stmt"/>
+      <line num="11" count="1" type="stmt"/>
+      <line num="16" count="0" type="stmt"/>
+      <line num="20" count="1" type="stmt"/>
+      <line num="21" count="1" type="stmt"/>
+      <line num="22" count="1" type="stmt"/>
+      <line num="26" count="2" type="stmt"/>
+      <line num="27" count="2" type="stmt"/>
+      <line num="30" count="2" type="cond" truecount="2" falsecount="0"/>
+      <line num="31" count="1" type="stmt"/>
+      <line num="33" count="1" type="stmt"/>
+      <line num="38" count="1" type="stmt"/>
     </file>
   </project>
 </coverage>
