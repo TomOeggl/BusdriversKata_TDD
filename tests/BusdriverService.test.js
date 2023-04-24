@@ -73,7 +73,7 @@ describe("BusdriverService class", () => {
       expect(stationOverview[2]).toEqual(2);
     });
 
-    it("has the exchangeGossipIsPossibleAtStations() method which create an array where the index is the number of the station and the value is true if more then one driver is there.", () => {
+    it("has the exchangeGossipIsPossibleAtStations() method which creates an array where the index is the number of the station and the value is true if more then one driver is there.", () => {
       // Arrange
 
       let mockProperties = {

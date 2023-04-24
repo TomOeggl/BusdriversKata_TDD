@@ -23,7 +23,6 @@ describe("Busdriver class", () => {
       // Act
       testDriver.initialize();
       const gossipArray = testDriver.gossipArray;
-      console.log(gossipArray);
       // Assert
       expect(gossipArray[testId]).toBe(true);
     });
