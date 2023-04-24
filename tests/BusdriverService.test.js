@@ -93,12 +93,38 @@ describe("BusdriverService class", () => {
       testBusdriverService.calculateNumberOfDriversAtStation();
       testBusdriverService.exchangeGossipIsPossibleAtStations();
 
-
       // Assert
-      let possibleAtStation = testBusdriverService.stationHasMultipleDriversArray;
-
+      let possibleAtStation =
+        testBusdriverService.stationHasMultipleDriversArray;
 
       expect(possibleAtStation[2]).toEqual(true);
+    });
+
+    it("triggers the creation of GossipExhangeStation instances for each station with more than one driver.", () => {
+      // Arrange
+
+      let mockProperties = {
+        allRoutes: [
+          [7, 2, 6, 8],
+          [6, 2, 7, 3],
+          [2, 8, 2, 1],
+        ],
+      };
+
+      let testBusdriverService = new BusdriverService(mockProperties);
+
+      // Act
+
+      testBusdriverService.busdriverFactory();
+      testBusdriverService.allDriveToNextStation();
+      testBusdriverService.calculateNumberOfDriversAtStation();
+      testBusdriverService.exchangeGossipIsPossibleAtStations();
+      testBusdriverService.createStations();
+
+      // Assert
+      let stations = testBusdriverService.stations;
+
+      expect(stations[0].busdriversAtStation[0].id).toBe(0);
     });
   });
 });
@@ -107,20 +133,17 @@ describe("BusdriverService class", () => {
 
 //allDrivers getCurrentStation return int
 
-
 // array =[true, false]
 // createExchangeGossipStations(array)
 
 // nextStep()
 
-
 //[1, , 1, , 3, 2 ] ==> map(if value > 1) => create new Station()
 //station.sumUpGossip ==> all Drivers pass Gossip to station
 //==> get summedUpStationGossipArray in return
 
-
 // stationHasMultipleDriversArray[x] = true ==> triggers creation of new GossipExchangeStation
-// GossipExchangeStation.sumUpGossipsAtStations ==> collects gossips of all drivers into a single bool array  
+// GossipExchangeStation.sumUpGossipsAtStations ==> collects gossips of all drivers into a single bool array
 // ==> if targetArray[gossip/driverIndex] != true while driverArray[gossip/driverIndex] = true ==> pass over
 // GossipExchangeStation.updateDriverGossip ==> passes it to each driver
 

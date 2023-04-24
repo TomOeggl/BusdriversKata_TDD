@@ -1,7 +1,7 @@
 class GossipExchangeStation {
   constructor(stationProperties) {
     this.numberOfGossips = stationProperties.numberOfGossips;
-    this.stationIndex = stationProperties.stationIndex;
+    // this.stationIndex = stationProperties.stationIndex;
     this.busdriversAtStation = stationProperties.busdriversAtStation;
     this.#initialize();
   }
@@ -11,7 +11,7 @@ class GossipExchangeStation {
     this.stationGossipArray.fill(false);
   }
 
-  
+
 
   collectGossips() {
     const passGossips = (driverGossipArray) => {
