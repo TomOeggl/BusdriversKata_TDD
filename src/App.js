@@ -1,5 +1,4 @@
-import Busdriver from "./Busdriver";
-import BusdriverService from "./BusdriverService";
+import BusdriverService from './BusdriverService.js';
 
 class App {
   constructor(properties) {
@@ -19,18 +18,18 @@ class App {
     this.reportIfSuccessful();
   }
 
-  run(){
-      for (let i = 1; i < this.maxSteps; i++) {
-        if(this.isFinished()){
-            this.reportResult();
-            break;
-        }
-        this.nextStep();
+  run() {
+    for (let i = 1; i < this.maxSteps; i++) {
+      if (this.isFinished()) {
+        this.reportResult();
+        break;
+      }
+      this.nextStep();
     }
   }
 
   nextStep() {
-    this.steps++;    
+    this.steps++;
     this.service.allDriveToNextStation();
     this.service.calculateNumberOfDriversAtStation();
     this.service.exchangeGossipIsPossibleAtStations();
@@ -38,22 +37,21 @@ class App {
     this.service.getFullGossipKnowledge();
     this.reportIfSuccessful();
   }
- 
-  reportIfSuccessful(){
-    if(this.isFinished())
-    {this.reportResult();}
+
+  reportIfSuccessful() {
+    if (this.isFinished()) {
+      this.reportResult();
+    }
   }
 
-  isFinished(){
+  isFinished() {
     return this.service.isGossipKnowledgeComplete();
   }
 
-  reportResult(){
-    console.log("Finished in " + this.steps + " steps");
-    this.resultInSteps = this.steps;
+  reportResult() {
+    console.log('Finished in ' + this.steps + ' steps');
+    return (this.resultInSteps = this.steps);
   }
-
-
 }
 
 export default App;
