@@ -6,6 +6,14 @@ class BusdriverService {
     this.allRoutes = properties.allRoutes;
     this.allDrivers = [];
     this.stations = [];
+    this.driversKnowAllGossips = []; //index is id
+    this.#initialize();
+  }
+
+  #initialize() {
+    this.getHighestStationNumber();
+    this.driversKnowAllGossips = new Array(this.allRoutes.length);
+    this.driversKnowAllGossips.fill(false);
   }
 
   busdriverFactory() {
@@ -14,12 +22,11 @@ class BusdriverService {
       busdriver.initialize();
       return busdriver;
     };
-
     this.allDrivers = this.allRoutes.map((route, index) => {
       let properties = {
         route: route,
         id: index,
-        numberOfGossips: this.allDrivers.length,
+        numberOfGossips: this.allRoutes.length,
       };
       return createBusdriver(properties);
     });
@@ -32,12 +39,11 @@ class BusdriverService {
   }
 
   calculateNumberOfDriversAtStation() {
-    let overviewArray = new Array(this.allDrivers.length);
+    let overviewArray = new Array(this.getHighestStationNumber());
     overviewArray.fill(0);
-
     this.allDrivers.forEach((driver) => {
       let currentStation = driver.getCurrentStation();
-      overviewArray[currentStation]++;
+      overviewArray[currentStation] += 1;
     });
 
     this.numberOfDriversAtStation = overviewArray;
@@ -52,6 +58,7 @@ class BusdriverService {
   }
 
   createStations() {
+    this.stations = [];
     const isAtStation = (driver, stationIndex) => {
       let currentStation = driver.getCurrentStation();
       return currentStation === stationIndex;
@@ -60,12 +67,12 @@ class BusdriverService {
     this.stationHasMultipleDriversArray.forEach((station, index) => {
       if (station) {
         let stationProperties = {
-          numberOfGossips: this.numberOfDrivers,
+          numberOfGossips: this.allDrivers.length,
           busdriversAtStation: [],
         };
-        this.allDrivers.forEach(driver => {
-          if(isAtStation(driver, index)){
-              stationProperties.busdriversAtStation.push(driver);
+        this.allDrivers.forEach((driver) => {
+          if (isAtStation(driver, index)) {
+            stationProperties.busdriversAtStation.push(driver);
           }
         });
 
@@ -74,6 +81,36 @@ class BusdriverService {
         this.stations.push(stationObject);
       }
     });
+  }
+
+  getFullGossipKnowledge() {
+    const passDrivers = (driverWithFullKnowledgeArray) => {
+      driverWithFullKnowledgeArray.forEach((driver, index) => {
+        if (driver) {
+          this.driversKnowAllGossips[index] = true;
+        }
+      });
+    };
+
+    this.stations.forEach((station) => {
+      passDrivers(station.getDriversKnowAllGossips());
+    });
+  }
+
+  isGossipKnowledgeComplete() {
+    let result = 1;
+    this.driversKnowAllGossips.forEach((driver) => {
+      result *= driver;
+    });
+    return result === 1;
+  }
+
+  getHighestStationNumber() {
+    let shallowArray = [];
+    this.allRoutes.forEach((route) => {
+      shallowArray = shallowArray.concat(route);
+    });
+    return Math.max(...shallowArray) + 1;
   }
 }
 

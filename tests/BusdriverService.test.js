@@ -126,6 +126,54 @@ describe("BusdriverService class", () => {
 
       expect(stations[0].busdriversAtStation[0].id).toBe(0);
     });
+
+    it("should create an array with the drivers that know all gossips through the getFullGossipKnowledge method", () => {
+      // Arrange
+
+      let mockProperties = {
+        allRoutes: [
+          [7, 2, 6, 8],
+          [6, 2, 7, 3],
+          [2, 8, 2, 1],
+        ],
+      };
+
+      let testBusdriverService = new BusdriverService(mockProperties);
+
+      // Act
+
+      testBusdriverService.busdriverFactory();
+      testBusdriverService.allDriveToNextStation();
+      testBusdriverService.calculateNumberOfDriversAtStation();
+      testBusdriverService.exchangeGossipIsPossibleAtStations();
+      testBusdriverService.createStations();
+      testBusdriverService.getFullGossipKnowledge();
+
+      // Assert
+      let gossipKnowledge = testBusdriverService.driversKnowAllGossips;
+
+      expect(gossipKnowledge).toEqual([false, false, false]);
+    });
+
+    it("should check if all drivers know all gossips through the isGossipKnowledgeComplete method.", () => {
+      // Arrange
+      let mockProperties = {
+        allRoutes: [
+          [7, 2, 6, 8],
+          [6, 2, 7, 3],
+          [2, 8, 2, 1],
+        ],
+      };
+      let testBusdriverService = new BusdriverService(mockProperties);
+      testBusdriverService.driversKnowAllGossips = [true, true, true]
+      // Act
+
+      let isComplete = testBusdriverService.isGossipKnowledgeComplete();
+
+      // Assert
+    
+      expect(isComplete).toEqual(true);
+    });
   });
 });
 

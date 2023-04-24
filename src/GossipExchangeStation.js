@@ -9,6 +9,8 @@ class GossipExchangeStation {
   #initialize() {
     this.stationGossipArray = new Array(this.numberOfGossips);
     this.stationGossipArray.fill(false);
+    this.collectGossips();
+    this.updateDriverGossips();
   }
 
 
