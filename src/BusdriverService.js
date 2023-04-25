@@ -48,7 +48,15 @@ class BusdriverService {
 
     this.numberOfDriversAtStation = overviewArray;
   }
-
+  
+  getHighestStationNumber() {
+    let shallowArray = [];
+    this.allRoutes.forEach((route) => {
+      shallowArray = shallowArray.concat(route);
+    });
+    return Math.max(...shallowArray) + 1;
+  }
+  
   exchangeGossipIsPossibleAtStations() {
     let boolArray = [];
     this.numberOfDriversAtStation.forEach((numberOfDrivers, index) => {
@@ -65,22 +73,30 @@ class BusdriverService {
     };
 
     this.stationHasMultipleDriversArray.forEach((station, index) => {
-      if (station) {
-        let stationProperties = {
-          numberOfGossips: this.allDrivers.length,
-          busdriversAtStation: [],
-        };
-        this.allDrivers.forEach((driver) => {
-          if (isAtStation(driver, index)) {
-            stationProperties.busdriversAtStation.push(driver);
-          }
-        });
-
-        let stationObject = new GossipExchangeStation(stationProperties);
-
-        this.stations.push(stationObject);
-      }
+      this.createSingleStation(station, pushDriversToStation, index);
     });
+
+    function pushDriversToStation(driver, index, stationProperties) {
+      if (isAtStation(driver, index)) {
+        stationProperties.busdriversAtStation.push(driver);
+      }
+    }
+  }
+
+  createSingleStation(station, pushDriversToStation, index) {
+    if (station) {
+      let stationProperties = {
+        numberOfGossips: this.allDrivers.length,
+        busdriversAtStation: [],
+      };
+      this.allDrivers.forEach((driver) => {
+        pushDriversToStation(driver, index, stationProperties);
+      });
+
+      let stationObject = new GossipExchangeStation(stationProperties);
+
+      this.stations.push(stationObject);
+    }
   }
 
   getFullGossipKnowledge() {
@@ -105,13 +121,6 @@ class BusdriverService {
     return result === 1;
   }
 
-  getHighestStationNumber() {
-    let shallowArray = [];
-    this.allRoutes.forEach((route) => {
-      shallowArray = shallowArray.concat(route);
-    });
-    return Math.max(...shallowArray) + 1;
-  }
 }
 
 export default BusdriverService;

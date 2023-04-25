@@ -39,3 +39,15 @@
 //busdriverHandler/manager/service ... routes? globalGossipCount? nextStep?
 
 // if more then 1 busdriver at any given station ==> make new station ... station.doAllStuff
+
+
+/*
+driverProperties = 
+{
+  id: 1, //arrayindex
+  route: [6,3,4,7], //subarray
+  numberOfGossips: 5
+}
+allRoutes =
+[[x,d,g,e,], [x,d,r,t]]
+*/

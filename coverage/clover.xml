@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1682406554119" clover="3.2.0">
-  <project timestamp="1682406554119" name="All files">
-    <metrics statements="123" coveredstatements="123" conditionals="16" coveredconditionals="16" methods="45" coveredmethods="45" elements="184" coveredelements="184" complexity="0" loc="123" ncloc="123" packages="1" files="4" classes="4"/>
+<coverage generated="1682408591894" clover="3.2.0">
+  <project timestamp="1682408591894" name="All files">
+    <metrics statements="125" coveredstatements="125" conditionals="16" coveredconditionals="16" methods="47" coveredmethods="47" elements="188" coveredelements="188" complexity="0" loc="125" ncloc="125" packages="1" files="4" classes="4"/>
     <file name="App.js" path="/home/thomas/projects/codeacademy-docker-master/workspace/BusdriversKata_TDD/src/App.js">
       <metrics statements="28" coveredstatements="28" conditionals="4" coveredconditionals="4" methods="6" coveredmethods="6"/>
       <line num="5" count="6" type="stmt"/>
@@ -53,7 +53,7 @@
       <line num="33" count="53" type="stmt"/>
     </file>
     <file name="BusdriverService.js" path="/home/thomas/projects/codeacademy-docker-master/workspace/BusdriversKata_TDD/src/BusdriverService.js">
-      <metrics statements="53" coveredstatements="53" conditionals="6" coveredconditionals="6" methods="22" coveredmethods="22"/>
+      <metrics statements="55" coveredstatements="55" conditionals="6" coveredconditionals="6" methods="24" coveredmethods="24"/>
       <line num="6" count="13" type="stmt"/>
       <line num="7" count="13" type="stmt"/>
       <line num="8" count="13" type="stmt"/>
@@ -77,65 +77,67 @@
       <line num="45" count="72" type="stmt"/>
       <line num="46" count="72" type="stmt"/>
       <line num="49" count="24" type="stmt"/>
-      <line num="53" count="23" type="stmt"/>
-      <line num="54" count="23" type="stmt"/>
-      <line num="55" count="195" type="stmt"/>
-      <line num="57" count="23" type="stmt"/>
-      <line num="61" count="22" type="stmt"/>
-      <line num="62" count="22" type="stmt"/>
-      <line num="63" count="39" type="stmt"/>
-      <line num="64" count="39" type="stmt"/>
-      <line num="67" count="22" type="stmt"/>
-      <line num="68" count="186" type="cond" truecount="2" falsecount="0"/>
-      <line num="69" count="13" type="stmt"/>
-      <line num="73" count="13" type="stmt"/>
-      <line num="74" count="39" type="cond" truecount="2" falsecount="0"/>
-      <line num="75" count="27" type="stmt"/>
-      <line num="79" count="13" type="stmt"/>
-      <line num="81" count="13" type="stmt"/>
-      <line num="87" count="21" type="stmt"/>
-      <line num="88" count="12" type="stmt"/>
-      <line num="89" count="36" type="cond" truecount="2" falsecount="0"/>
-      <line num="90" count="15" type="stmt"/>
-      <line num="95" count="21" type="stmt"/>
-      <line num="96" count="12" type="stmt"/>
-      <line num="101" count="33" type="stmt"/>
-      <line num="102" count="33" type="stmt"/>
-      <line num="103" count="99" type="stmt"/>
-      <line num="105" count="33" type="stmt"/>
-      <line num="109" count="37" type="stmt"/>
-      <line num="110" count="37" type="stmt"/>
-      <line num="111" count="111" type="stmt"/>
-      <line num="113" count="37" type="stmt"/>
+      <line num="53" count="37" type="stmt"/>
+      <line num="54" count="37" type="stmt"/>
+      <line num="55" count="111" type="stmt"/>
+      <line num="57" count="37" type="stmt"/>
+      <line num="61" count="23" type="stmt"/>
+      <line num="62" count="23" type="stmt"/>
+      <line num="63" count="195" type="stmt"/>
+      <line num="65" count="23" type="stmt"/>
+      <line num="69" count="22" type="stmt"/>
+      <line num="70" count="22" type="stmt"/>
+      <line num="71" count="39" type="stmt"/>
+      <line num="72" count="39" type="stmt"/>
+      <line num="75" count="22" type="stmt"/>
+      <line num="76" count="186" type="stmt"/>
+      <line num="80" count="39" type="cond" truecount="2" falsecount="0"/>
+      <line num="81" count="27" type="stmt"/>
+      <line num="87" count="186" type="cond" truecount="2" falsecount="0"/>
+      <line num="88" count="13" type="stmt"/>
+      <line num="92" count="13" type="stmt"/>
+      <line num="93" count="39" type="stmt"/>
+      <line num="96" count="13" type="stmt"/>
+      <line num="98" count="13" type="stmt"/>
+      <line num="103" count="21" type="stmt"/>
+      <line num="104" count="12" type="stmt"/>
+      <line num="105" count="36" type="cond" truecount="2" falsecount="0"/>
+      <line num="106" count="15" type="stmt"/>
+      <line num="111" count="21" type="stmt"/>
+      <line num="112" count="12" type="stmt"/>
+      <line num="117" count="33" type="stmt"/>
+      <line num="118" count="33" type="stmt"/>
+      <line num="119" count="99" type="stmt"/>
+      <line num="121" count="33" type="stmt"/>
     </file>
     <file name="GossipExchangeStation.js" path="/home/thomas/projects/codeacademy-docker-master/workspace/BusdriversKata_TDD/src/GossipExchangeStation.js">
       <metrics statements="26" coveredstatements="26" conditionals="4" coveredconditionals="4" methods="11" coveredmethods="11"/>
       <line num="3" count="18" type="stmt"/>
+      <line num="4" count="18" type="stmt"/>
       <line num="5" count="18" type="stmt"/>
-      <line num="6" count="18" type="stmt"/>
+      <line num="9" count="18" type="stmt"/>
       <line num="10" count="18" type="stmt"/>
       <line num="11" count="18" type="stmt"/>
       <line num="12" count="18" type="stmt"/>
-      <line num="13" count="18" type="stmt"/>
-      <line num="19" count="21" type="stmt"/>
-      <line num="20" count="51" type="stmt"/>
-      <line num="21" count="177" type="cond" truecount="2" falsecount="0"/>
-      <line num="22" count="94" type="stmt"/>
-      <line num="27" count="21" type="stmt"/>
-      <line num="28" count="51" type="stmt"/>
-      <line num="33" count="20" type="stmt"/>
-      <line num="34" count="48" type="stmt"/>
+      <line num="16" count="21" type="stmt"/>
+      <line num="17" count="51" type="stmt"/>
+      <line num="18" count="177" type="cond" truecount="2" falsecount="0"/>
+      <line num="19" count="94" type="stmt"/>
+      <line num="24" count="21" type="stmt"/>
+      <line num="25" count="51" type="stmt"/>
+      <line num="30" count="20" type="stmt"/>
+      <line num="31" count="48" type="stmt"/>
+      <line num="36" count="13" type="stmt"/>
+      <line num="37" count="13" type="stmt"/>
       <line num="39" count="13" type="stmt"/>
       <line num="40" count="13" type="stmt"/>
-      <line num="42" count="13" type="stmt"/>
-      <line num="43" count="13" type="stmt"/>
+      <line num="41" count="13" type="stmt"/>
+      <line num="42" count="40" type="stmt"/>
       <line num="44" count="13" type="stmt"/>
-      <line num="45" count="40" type="stmt"/>
-      <line num="47" count="13" type="stmt"/>
-      <line num="49" count="13" type="cond" truecount="2" falsecount="0"/>
-      <line num="50" count="8" type="stmt"/>
-      <line num="51" count="18" type="stmt"/>
-      <line num="54" count="13" type="stmt"/>
+      <line num="46" count="13" type="cond" truecount="2" falsecount="0"/>
+      <line num="47" count="8" type="stmt"/>
+      <line num="48" count="18" type="stmt"/>
+      <line num="51" count="13" type="stmt"/>
     </file>
   </project>
 </coverage>

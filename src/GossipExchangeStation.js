@@ -1,7 +1,6 @@
 class GossipExchangeStation {
   constructor(stationProperties) {
     this.numberOfGossips = stationProperties.numberOfGossips;
-    // this.stationIndex = stationProperties.stationIndex;
     this.busdriversAtStation = stationProperties.busdriversAtStation;
     this.#initialize();
   }
@@ -12,8 +11,6 @@ class GossipExchangeStation {
     this.collectGossips();
     this.updateDriverGossips();
   }
-
-
 
   collectGossips() {
     const passGossips = (driverGossipArray) => {
@@ -39,14 +36,14 @@ class GossipExchangeStation {
     let driversWithFullKnowledge = new Array(this.numberOfGossips);
     driversWithFullKnowledge.fill(false);
 
-    const isComplete = () => {
+    const areAllGossipsKnownAtStation = () => {
       let result = 1;
       this.stationGossipArray.forEach((gossip) => {
         result *= gossip;
       });
       return result === 1;
     };
-    if (isComplete()) {
+    if (areAllGossipsKnownAtStation()) {
       this.busdriversAtStation.forEach((driver) => {
         driversWithFullKnowledge[driver.id] = true;
       });

@@ -35,14 +35,3 @@ class Busdriver {
 }
 
 export default Busdriver;
-
-/*
-driverProperties = 
-{
-  id: 1, //arrayindex
-  route: [6,3,4,7], //subarray
-  numberOfGossips: 5
-}
-allRoutes =
-[[x,d,g,e,], [x,d,r,t]]
-*/
