@@ -28,9 +28,9 @@ class Busdriver {
 
     if (isLastStop()) {
       this.currentRouteIndex = 0;
-    } else {
-      this.currentRouteIndex++;
+      return;
     }
+    this.currentRouteIndex++;
   }
 }
 

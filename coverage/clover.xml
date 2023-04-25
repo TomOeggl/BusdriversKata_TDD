@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1682362069124" clover="3.2.0">
-  <project timestamp="1682362069124" name="All files">
-    <metrics statements="122" coveredstatements="122" conditionals="16" coveredconditionals="16" methods="45" coveredmethods="45" elements="183" coveredelements="183" complexity="0" loc="122" ncloc="122" packages="1" files="4" classes="4"/>
-    <file name="App.js" path="C:\LocalDrive\BusdriversKata_TDD\src\App.js">
+<coverage generated="1682406554119" clover="3.2.0">
+  <project timestamp="1682406554119" name="All files">
+    <metrics statements="123" coveredstatements="123" conditionals="16" coveredconditionals="16" methods="45" coveredmethods="45" elements="184" coveredelements="184" complexity="0" loc="123" ncloc="123" packages="1" files="4" classes="4"/>
+    <file name="App.js" path="/home/thomas/projects/codeacademy-docker-master/workspace/BusdriversKata_TDD/src/App.js">
       <metrics statements="28" coveredstatements="28" conditionals="4" coveredconditionals="4" methods="6" coveredmethods="6"/>
       <line num="5" count="6" type="stmt"/>
       <line num="6" count="6" type="stmt"/>
@@ -33,8 +33,8 @@
       <line num="52" count="5" type="stmt"/>
       <line num="53" count="5" type="stmt"/>
     </file>
-    <file name="Busdriver.js" path="C:\LocalDrive\BusdriversKata_TDD\src\Busdriver.js">
-      <metrics statements="15" coveredstatements="15" conditionals="2" coveredconditionals="2" methods="6" coveredmethods="6"/>
+    <file name="Busdriver.js" path="/home/thomas/projects/codeacademy-docker-master/workspace/BusdriversKata_TDD/src/Busdriver.js">
+      <metrics statements="16" coveredstatements="16" conditionals="2" coveredconditionals="2" methods="6" coveredmethods="6"/>
       <line num="3" count="41" type="stmt"/>
       <line num="4" count="41" type="stmt"/>
       <line num="5" count="41" type="stmt"/>
@@ -49,9 +49,10 @@
       <line num="26" count="59" type="stmt"/>
       <line num="29" count="59" type="cond" truecount="2" falsecount="0"/>
       <line num="30" count="6" type="stmt"/>
-      <line num="32" count="53" type="stmt"/>
+      <line num="31" count="6" type="stmt"/>
+      <line num="33" count="53" type="stmt"/>
     </file>
-    <file name="BusdriverService.js" path="C:\LocalDrive\BusdriversKata_TDD\src\BusdriverService.js">
+    <file name="BusdriverService.js" path="/home/thomas/projects/codeacademy-docker-master/workspace/BusdriversKata_TDD/src/BusdriverService.js">
       <metrics statements="53" coveredstatements="53" conditionals="6" coveredconditionals="6" methods="22" coveredmethods="22"/>
       <line num="6" count="13" type="stmt"/>
       <line num="7" count="13" type="stmt"/>
@@ -107,7 +108,7 @@
       <line num="111" count="111" type="stmt"/>
       <line num="113" count="37" type="stmt"/>
     </file>
-    <file name="GossipExchangeStation.js" path="C:\LocalDrive\BusdriversKata_TDD\src\GossipExchangeStation.js">
+    <file name="GossipExchangeStation.js" path="/home/thomas/projects/codeacademy-docker-master/workspace/BusdriversKata_TDD/src/GossipExchangeStation.js">
       <metrics statements="26" coveredstatements="26" conditionals="4" coveredconditionals="4" methods="11" coveredmethods="11"/>
       <line num="3" count="18" type="stmt"/>
       <line num="5" count="18" type="stmt"/>
