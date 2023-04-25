@@ -13,14 +13,14 @@ const renderDriverRouteInputs = numberOfDrivers => {
       <option value="2, 4, 5, 7">
     </datalist>`;
   }
-  driverInputs += '<br><br><button>Start gossiping!</button>';
+  driverInputs += '<br><br><button>Start working/gossiping</button>';
   form.innerHTML = driverInputs;
 };
 
 const startGossiping = () => {
   const app = new App({
     maxSteps: 480,
-    allRoutes: Array.from(document.querySelectorAll('.route')).map(element => {
+    allRoutes: Array.from(form.querySelectorAll('.route')).map(element => {
       return element.value.split(/\s*,\s*/).map(element => parseInt(element));
     }),
   });
