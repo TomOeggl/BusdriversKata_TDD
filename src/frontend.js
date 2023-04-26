@@ -7,13 +7,14 @@ const renderDriverRouteInputs = (numberOfDrivers) => {
     <br><input type="text" class="route" list="routes"
     placeholder="Bus stop numbers" required>
     <datalist id="routes">
-      <option value="1, 2, 3">
-      <option value="2, 6, 1, 4">
-      <option value="1, 3, 2, 4">
-      <option value="2, 4, 5, 7">
+      <option value="3, 1, 2, 3">
+      <option value="3, 2, 3, 1">
+      <option value="4, 2, 3, 4, 5">
+      <option value="2, 1, 2">
+      <option value="5, 2, 8">
     </datalist>`;
   }
-  driverInputs += "<br><br><button>Start working/gossiping</button>";
+  driverInputs += "<br><br><button>Start working / gossiping</button>";
   form.innerHTML = driverInputs;
 };
 
