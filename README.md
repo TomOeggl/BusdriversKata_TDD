@@ -44,6 +44,6 @@ The number of stops it takes to have all drivers on board with the latest gossip
 
 never
 
-**Source**
+## Source
 
-https://kata-log.rocks/gossiping-bus-drivers-kata
+https://www.reddit.com/r/dailyprogrammer/comments/4gqm90/20160427_challenge_264_intermediate_gossiping_bus/
