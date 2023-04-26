@@ -43,3 +43,7 @@ The number of stops it takes to have all drivers on board with the latest gossip
 **Output example 2:**
 
 never
+
+**Source**
+
+https://kata-log.rocks/gossiping-bus-drivers-kata
