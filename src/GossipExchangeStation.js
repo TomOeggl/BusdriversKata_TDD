@@ -2,10 +2,10 @@ class GossipExchangeStation {
   constructor(stationProperties) {
     this.numberOfGossips = stationProperties.numberOfGossips;
     this.busdriversAtStation = stationProperties.busdriversAtStation;
-    this.#initialize();
+    this.initialize();
   }
 
-  #initialize() {
+  initialize() {
     this.stationGossipArray = new Array(this.numberOfGossips);
     this.stationGossipArray.fill(false);
     this.collectGossips();

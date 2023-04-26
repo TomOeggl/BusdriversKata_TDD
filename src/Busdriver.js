@@ -5,6 +5,13 @@ class Busdriver {
     this.numberOfGossips = driverProperties.numberOfGossips;
     this.route = driverProperties.route;
     this.currentRouteIndex = 0;
+    this.initialize();
+  }
+
+  initialize() {
+    this.gossipArray = new Array(this.numberOfGossips);
+    this.gossipArray.fill(false);
+    this.gossipArray[this.id] = true;
   }
 
   getGossipArray() {
@@ -15,20 +22,13 @@ class Busdriver {
     return this.route[this.currentRouteIndex];
   }
 
-  initialize() {
-    this.gossipArray = new Array(this.numberOfGossips);
-    this.gossipArray.fill(false);
-    this.gossipArray[this.id] = true;
-  }
-
   driveToNextStation() {
     const isLastStop = () => {
       return this.currentRouteIndex === this.route.length - 1;
     };
 
     if (isLastStop()) {
-      this.currentRouteIndex = 0;
-      return;
+      return this.currentRouteIndex = 0;
     }
     this.currentRouteIndex++;
   }

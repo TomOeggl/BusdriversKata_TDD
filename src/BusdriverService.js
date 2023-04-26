@@ -7,11 +7,10 @@ class BusdriverService {
     this.allDrivers = [];
     this.stations = [];
     this.driversKnowAllGossips = []; //index is id
-    this.#initialize();
+    this.initialize();
   }
 
-  #initialize() {
-    this.getHighestStationNumber();
+  initialize() {
     this.driversKnowAllGossips = new Array(this.allRoutes.length);
     this.driversKnowAllGossips.fill(false);
   }
@@ -19,9 +18,9 @@ class BusdriverService {
   busdriverFactory() {
     const createBusdriver = (busdriverProperties) => {
       let busdriver = new Busdriver(busdriverProperties);
-      busdriver.initialize();
       return busdriver;
     };
+
     this.allDrivers = this.allRoutes.map((route, index) => {
       let properties = {
         route: route,
@@ -39,8 +38,17 @@ class BusdriverService {
   }
 
   calculateNumberOfDriversAtStation() {
-    let overviewArray = new Array(this.getHighestStationNumber());
+    const getHighestStationNumber = () => {
+      let shallowArray = [];
+      this.allRoutes.forEach((route) => {
+        shallowArray = shallowArray.concat(route);
+      });
+      return Math.max(...shallowArray) + 1;
+    };
+
+    let overviewArray = new Array(getHighestStationNumber());
     overviewArray.fill(0);
+
     this.allDrivers.forEach((driver) => {
       let currentStation = driver.getCurrentStation();
       overviewArray[currentStation] += 1;
@@ -48,58 +56,52 @@ class BusdriverService {
 
     this.numberOfDriversAtStation = overviewArray;
   }
-  
-  getHighestStationNumber() {
-    let shallowArray = [];
-    this.allRoutes.forEach((route) => {
-      shallowArray = shallowArray.concat(route);
-    });
-    return Math.max(...shallowArray) + 1;
-  }
-  
+
   exchangeGossipIsPossibleAtStations() {
     let boolArray = [];
+
     this.numberOfDriversAtStation.forEach((numberOfDrivers, index) => {
       boolArray[index] = numberOfDrivers > 1;
     });
     this.stationHasMultipleDriversArray = boolArray;
   }
 
-  createStations() {
+  createStationsForGossipExhange() {
     this.stations = [];
+
+    const createSingleStation = (station, pushDriversToStation, index) => {
+      if (station) {
+        let stationProperties = {
+          numberOfGossips: this.allDrivers.length,
+          busdriversAtStation: [],
+        };
+        this.allDrivers.forEach((driver) => {
+          pushDriversToStation(driver, index, stationProperties);
+        });
+
+        let stationObject = new GossipExchangeStation(stationProperties);
+
+        this.stations.push(stationObject);
+      }
+    };
+
     const isAtStation = (driver, stationIndex) => {
       let currentStation = driver.getCurrentStation();
       return currentStation === stationIndex;
     };
 
-    this.stationHasMultipleDriversArray.forEach((station, index) => {
-      this.createSingleStation(station, pushDriversToStation, index);
-    });
-
-    function pushDriversToStation(driver, index, stationProperties) {
+    const pushDriversToStation = (driver, index, stationProperties) => {
       if (isAtStation(driver, index)) {
         stationProperties.busdriversAtStation.push(driver);
       }
-    }
+    };
+
+    this.stationHasMultipleDriversArray.forEach((station, index) => {
+      createSingleStation(station, pushDriversToStation, index);
+    });
   }
 
-  createSingleStation(station, pushDriversToStation, index) {
-    if (station) {
-      let stationProperties = {
-        numberOfGossips: this.allDrivers.length,
-        busdriversAtStation: [],
-      };
-      this.allDrivers.forEach((driver) => {
-        pushDriversToStation(driver, index, stationProperties);
-      });
-
-      let stationObject = new GossipExchangeStation(stationProperties);
-
-      this.stations.push(stationObject);
-    }
-  }
-
-  getFullGossipKnowledge() {
+  getDriversHaveFullGossipKnowledge() {
     const passDrivers = (driverWithFullKnowledgeArray) => {
       driverWithFullKnowledgeArray.forEach((driver, index) => {
         if (driver) {
@@ -120,7 +122,6 @@ class BusdriverService {
     });
     return result === 1;
   }
-
 }
 
 export default BusdriverService;
